@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>제이슨</h1>
+    <hr>
+
+    <script>
+        //제이슨으로 보내는 이유는 공통 언어로 변경해서 통신하려고.
+        let user = {
+            id: 1,
+            username: "ssar",
+            password: "1234",
+            hobby: ["축구", "농구"]
+        };
+
+        // js object -> json String  . 매우 중요. 제이슨은 문자열
+        let requestBody = JSON.stringify(user);
+        console.log(requestBody);
+
+        // json String -> js object
+        let responseBody = JSON.parse(requestBody);
+        console.log(responseBody);
+
+    </script>
+</body>
+
+</html>

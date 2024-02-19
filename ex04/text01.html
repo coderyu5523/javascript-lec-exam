@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">이벤트 기본</h1>
+    <hr>
+    <button onclick="changeTitle()">제목변경</button>
+    <script>
+        // 제목변경 버튼이 클릭되면 changeTitle 이 큐에 등록됨. js는 단일스레드기 때문에 바로 실행시키지 않고 이벤트 루프에 등록해놓고 나중에 실행시킴. 큐는 이벤트 루프라고 함.
+        //메인스레드가 바쁘면 동작하지 않는다. 이게 이벤트
+        function changeTitle() {
+            window.alert("제목변경 클릭됨");
+            //window는 자바스크립트 최상위 객체. 윈도우는 생략 가능
+
+            //id는 문서에서 유일해야됨, class는 중복가능
+            //element==tag 는 중복 가능
+            let title = document.querySelector("#title"); //는 제일 위에 있는 div 하나만 찾음.
+            // querySelectorAll 를 사용해야 모든 div를 찾음
+            // 클래스와 태그는 배열로 리턴. id로 찾으면 단일 오브젝트
+            //id 로 찾으려면 querySelector , class , tag 로 찾으려면 querySelectorAll 사용
+            // id 로 찾을떈 #
+            title.innerHTML = "<i>반가워</i>"
+            //innerHTML 은 내부에 html 코드를 작성할 수 있음
+        }
+
+    </script>
+</body>
+
+</html>

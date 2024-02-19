@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <p><a href="https://www.w3schools.com" title="some titke" id="w3s">W3Schools.com</a></p>
+
+    <button>change href and title</button>
+    <p>어쩌고저쩌고</p>
+
+    <script>
+        $("button").click(function () {
+            $("#w3s").attr({
+                "href": "https://www.w3schools.com/jquery",
+                "title": "W3Schools jquery tutorial"
+
+            });
+        })
+    </script>
+
+</body>
+
+</html>
