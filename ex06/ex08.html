@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>그림1</h1>
+    <h1>그림2</h1>
+    <h1>그림3</h1>
+    <div>
+        통신 데이터 그려넣기
+    </div>
+    <h1>그림4</h1>
+    <h1>그림5</h1>
+    <h1>그림6</h1>
+
+    <script>
+        function download() {
+            let response = fetch("http://localhost:8080/user");
+            console.log(response);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Font Awesome 5 Icons</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .my-cursor {
+            cursor: pointer;
+        }
+
+        .my-love {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <i onclick="loveToggle(event)" class="fas fa-heart my-cursor"></i>
+    <script>
+        //토글 클래스를 코드로 만들어봄. -1 에 -1 을 곱함.
+
+        let check = -1;
+        function loveToggle(e) {
+            console.log(e.target);
+            if (check == -1) {
+                $(e.target).addClass("my-love");
+            } else {
+                $(e.target).removeClass("my-love");
+            }
+            check = check * -1;
+        }
+    </script>
+</body>
+
+</html>
